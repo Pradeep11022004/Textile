@@ -1,0 +1,115 @@
+# =====================================
+# JAVA / SPRING BOOT / MAVEN
+# =====================================
+
+*.class
+*.jar
+*.war
+*.ear
+
+target/
+!mvnw
+!mvnw.cmd
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot logs
+*.log
+logs/
+
+# Local Spring configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# =====================================
+# FRONTEND / NODE / REACT / VITE
+# =====================================
+
+node_modules/
+Frontend/node_modules/
+
+dist/
+Frontend/dist/
+
+build/
+Frontend/build/
+
+.vite/
+*.local
+
+# npm / package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =====================================
+# ENVIRONMENT VARIABLES / SECRETS
+# =====================================
+
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# =====================================
+# IDE / EDITOR
+# =====================================
+
+.idea/
+*.iml
+
+.classpath
+.project
+.settings/
+.factorypath
+
+.vscode/
+*.swp
+*.swo
+
+# =====================================
+# OPERATING SYSTEM
+# =====================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================
+# TEMPORARY FILES
+# =====================================
+
+*.tmp
+*.temp
+*.bak
+*.old
+
+# =====================================
+# TEST / COVERAGE
+# =====================================
+
+coverage/
+.nyc_output/
+
+# =====================================
+# DATABASE / BACKUP FILES
+# =====================================
+
+*.sql
+*.sqlite
+*.db
+*.dump
+
+# =====================================
+# SECURITY / CERTIFICATES
+# =====================================
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+secrets/

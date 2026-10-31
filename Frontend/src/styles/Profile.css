@@ -1,0 +1,687 @@
+
+/* =========================================
+   PROFILE PAGE — TEXTILE STORE
+========================================= */
+
+.customer-account {
+  min-height: 80vh;
+  padding: 42px 5%;
+  background: #fff8f0;
+  color: #34212b;
+  box-sizing: border-box;
+}
+
+.customer-account * {
+  box-sizing: border-box;
+}
+
+.account-breadcrumb {
+  max-width: 1300px;
+  margin: 0 auto 28px;
+  color: #8b737b;
+  font-size: 13px;
+}
+
+.account-breadcrumb a {
+  color: #b8325a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.account-breadcrumb a:hover {
+  color: #f06c54;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.account-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 26px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.account-sidebar,
+.account-content {
+  background: #fff;
+  border: 1px solid #f0e2dc;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(70, 35, 45, 0.05);
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.account-user-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 22px;
+  background: linear-gradient(135deg, #fce8ee, #fff4d8);
+  border-bottom: 1px solid #f3e3dc;
+}
+
+.account-avatar {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 19px;
+  background: linear-gradient(135deg, #b8325a, #f06c54);
+  color: #fff;
+  font-size: 23px;
+  font-weight: 800;
+  box-shadow: 0 5px 14px rgba(184, 50, 90, 0.2);
+}
+
+.account-user-summary p {
+  margin: 0 0 5px;
+  color: #8b737b;
+  font-size: 12px;
+}
+
+.account-user-summary h3 {
+  margin: 0;
+  color: #34212b;
+  font-size: 16px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.account-menu {
+  padding: 18px 12px;
+}
+
+.account-menu-heading {
+  padding: 0 12px;
+  margin: 0 0 12px;
+  color: #a18b91;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.account-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  margin: 4px 0;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: #65515a;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.account-menu-item:hover {
+  background: #fff1e9;
+  color: #b8325a;
+  transform: translateX(3px);
+}
+
+.account-menu-item.active {
+  background: #fce8ee;
+  color: #b8325a;
+  font-weight: 750;
+}
+
+.menu-arrow {
+  margin-left: auto;
+  font-size: 21px;
+}
+
+.logout-item {
+  margin-top: 14px;
+  border-top: 1px solid #f1e7e3;
+  border-radius: 0 0 12px 12px;
+  color: #c04444;
+}
+
+.logout-item:hover {
+  background: #fff0ed;
+  color: #a72f36;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.account-content {
+  min-height: 440px;
+  padding: 34px;
+}
+
+.account-content-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.account-content-heading h1 {
+  margin: 0 0 9px;
+  color: #34212b;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.account-content-heading p {
+  margin: 0;
+  color: #8b737b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.account-role {
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: #e5f3ec;
+  color: #2f806f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.account-info-card {
+  margin-bottom: 22px;
+  padding: 25px;
+  border: 1px solid #f0e5df;
+  border-radius: 20px;
+  background: #fffdfb;
+}
+
+.account-info-card h2 {
+  margin: 0 0 22px;
+  color: #34212b;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.account-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.account-info-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: #9a858c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.account-info-field p {
+  margin: 0;
+  color: #34212b;
+  font-size: 15px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.account-muted {
+  margin: 0 0 22px;
+  color: #806e75;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.account-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(110deg, #b8325a, #f06c54);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(184, 50, 90, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(184, 50, 90, 0.23);
+}
+
+.account-content-heading .account-primary-btn {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   ADDRESS FORM
+========================================= */
+
+.address-form-card {
+  margin-top: 12px;
+  animation: addressFadeIn 0.25s ease both;
+}
+
+.address-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.address-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.address-form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.address-form-field label {
+  color: #65515a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.address-form-field input,
+.address-form-field textarea,
+.address-form-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 15px;
+  border: 1px solid #eadbd6;
+  border-radius: 13px;
+  outline: none;
+  background: #fff;
+  color: #34212b;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.address-form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.address-form-field input:focus,
+.address-form-field textarea:focus,
+.address-form-field select:focus {
+  border-color: #b8325a;
+  box-shadow: 0 0 0 4px rgba(184, 50, 90, 0.09);
+}
+
+.address-default-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  color: #65515a;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.address-default-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #b8325a;
+  cursor: pointer;
+}
+
+.address-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.address-cancel-btn {
+  min-height: 44px;
+  padding: 11px 20px;
+  border: 1px solid #eadbd6;
+  border-radius: 30px;
+  background: #fff;
+  color: #65515a;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.address-cancel-btn:hover {
+  background: #fff1e9;
+  border-color: #f0c8c1;
+}
+
+/* =========================================
+   ADDRESS LIST
+========================================= */
+
+.address-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.address-card {
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #f0e2dc;
+  border-radius: 19px;
+  background: #fffdfb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.address-card:hover {
+  transform: translateY(-3px);
+  border-color: #e7b8c4;
+  box-shadow: 0 10px 24px rgba(70, 35, 45, 0.07);
+}
+
+.address-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.address-card-heading h2 {
+  margin: 0;
+  color: #b8325a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.default-address-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 11px;
+  border-radius: 30px;
+  background: #e5f3ec;
+  color: #2f806f;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.address-card h3 {
+  margin: 0 0 10px;
+  color: #34212b;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.address-card p {
+  margin: 6px 0;
+  color: #806e75;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.address-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f1e7e3;
+}
+
+.address-action-btn,
+.address-delete-btn {
+  min-height: 35px;
+  padding: 8px 13px;
+  border: 1px solid #edcbd4;
+  border-radius: 30px;
+  background: #fff;
+  color: #b8325a;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.address-action-btn:hover {
+  background: #b8325a;
+  border-color: #b8325a;
+  color: #fff;
+}
+
+.address-delete-btn {
+  border-color: #f0cccc;
+  color: #b83b3b;
+}
+
+.address-delete-btn:hover {
+  background: #b83b3b;
+  border-color: #b83b3b;
+  color: #fff;
+}
+
+/* =========================================
+   EMPTY ADDRESS STATE
+========================================= */
+
+.address-empty {
+  padding: 45px 25px;
+  border: 1px dashed #e8cbd0;
+  border-radius: 20px;
+  background: #fffaf7;
+  text-align: center;
+}
+
+.address-empty h2 {
+  margin-bottom: 12px;
+  color: #34212b;
+}
+
+/* =========================================
+   SUCCESS AND ERROR MESSAGES
+========================================= */
+
+.address-success-message,
+.address-error-message {
+  margin: 0 0 18px;
+  padding: 13px 16px;
+  border-radius: 13px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.address-success-message {
+  border: 1px solid #cce6d7;
+  background: #edf8f1;
+  color: #28745e;
+}
+
+.address-error-message {
+  border: 1px solid #f0cccc;
+  background: #fff0ef;
+  color: #b33333;
+}
+
+/* =========================================
+   LOGIN MESSAGE
+========================================= */
+
+.account-login-message {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 42px 30px;
+  border: 1px solid #f0e2dc;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(70, 35, 45, 0.07);
+  text-align: center;
+}
+
+.account-login-message h2 {
+  margin: 0 0 22px;
+  color: #34212b;
+  font-size: 23px;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes addressFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .customer-account {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .account-layout {
+    grid-template-columns: 235px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .account-content {
+    padding: 25px 22px;
+  }
+
+  .address-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .customer-account {
+    padding: 22px 14px;
+  }
+
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-content {
+    min-height: 0;
+    padding: 23px 17px;
+  }
+
+  .account-info-grid {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+
+  .account-content-heading {
+    flex-wrap: wrap;
+  }
+
+  .account-content-heading .account-primary-btn {
+    width: 100%;
+  }
+
+  .address-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .address-form-field.full-width {
+    grid-column: auto;
+  }
+
+  .address-form-actions {
+    flex-direction: column;
+  }
+
+  .address-form-actions button {
+    width: 100%;
+  }
+
+  .address-card-actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .account-info-card {
+    padding: 18px 15px;
+  }
+
+  .account-user-summary {
+    padding: 19px 16px;
+  }
+
+  .account-menu-item {
+    padding: 12px;
+  }
+
+  .account-content-heading h1 {
+    font-size: 23px;
+  }
+
+  .account-login-message {
+    margin: 45px auto;
+    padding: 30px 20px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .customer-account *,
+  .customer-account *::before,
+  .customer-account *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

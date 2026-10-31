@@ -1,0 +1,193 @@
+
+/* ==========================================
+   AURA TEXTILE
+   BRIGHT LUXURY DESIGN SYSTEM
+========================================== */
+
+:root {
+  /* Brand palette */
+  --color-brand: #B8325A;
+  --color-brand-dark: #8E2445;
+  --color-brand-light: #F5D5DF;
+
+  --color-coral: #F06C54;
+  --color-marigold: #F4B942;
+  --color-teal: #2F806F;
+
+  /* Backgrounds */
+  --color-background: #FFF8F0;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #FFF0E5;
+  --color-pink-soft: #FCE8EE;
+  --color-yellow-soft: #FFF4D8;
+  --color-green-soft: #E5F3EC;
+
+  /* Typography */
+  --color-text: #34212B;
+  --color-text-secondary: #75616A;
+  --color-text-muted: #A18C94;
+  --color-text-inverse: #FFFFFF;
+
+  /* Borders */
+  --color-border: #F0DCE0;
+
+  /* Typography */
+  --font-body: "Poppins", sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Curved corners */
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft:
+    0 5px 20px rgba(184, 50, 90, 0.07);
+
+  --shadow-card:
+    0 12px 35px rgba(52, 33, 43, 0.09);
+
+  --shadow-hover:
+    0 18px 40px rgba(184, 50, 90, 0.15);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 160ms;
+  --duration-normal: 240ms;
+
+  /* Layout */
+  --container-width: 1280px;
+  --page-gutter: clamp(18px, 5vw, 76px);
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+/* IMAGES */
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* FORM ELEMENTS */
+
+input,
+textarea,
+select {
+  color: var(--color-text);
+  border-radius: var(--radius-small);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ACCESSIBILITY */
+
+:focus-visible {
+  outline: 2px solid var(--color-coral);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: white;
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

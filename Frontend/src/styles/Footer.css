@@ -1,0 +1,219 @@
+
+/* =========================================
+   AURA TEXTILE — FOOTER
+========================================= */
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: 75px;
+  padding: 65px 7% 22px;
+  border-radius: 38px 38px 0 0;
+  background: #34212b;
+  color: #fff8f0;
+}
+
+/* Decorative background accents */
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.footer::before {
+  top: -115px;
+  right: 8%;
+  width: 230px;
+  height: 230px;
+  background: rgba(240, 108, 84, 0.13);
+}
+
+.footer::after {
+  bottom: -150px;
+  left: 35%;
+  width: 260px;
+  height: 260px;
+  background: rgba(184, 50, 90, 0.13);
+}
+
+/* Main layout */
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1.1fr;
+  gap: 65px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand */
+
+.footer-brand-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-brand h2 {
+  margin: 0 0 17px;
+  color: #fff8f0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.footer-brand h2 span {
+  color: #f4b942;
+}
+
+.footer-brand p {
+  max-width: 310px;
+  margin: 0;
+  color: #d9c8cd;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Section headings */
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  position: relative;
+  margin: 0 0 9px;
+  color: #f4b942;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.footer-links h3::after,
+.footer-contact h3::after {
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background: #f06c54;
+  content: "";
+}
+
+/* Quick links */
+
+.footer-links a {
+  color: #d9c8cd;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Contact details */
+
+.footer-contact p {
+  margin: 0;
+  color: #d9c8cd;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.footer-contact p:hover {
+  color: #fff8f0;
+}
+
+/* Bottom copyright */
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 248, 240, 0.15);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #bdaab1;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .footer {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .footer {
+    margin-top: 50px;
+    padding: 45px 22px 20px;
+    border-radius: 27px 27px 0 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-brand p {
+    max-width: 280px;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+    padding-top: 18px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer *,
+  .footer *::before,
+  .footer *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
